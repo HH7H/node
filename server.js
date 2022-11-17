@@ -8,6 +8,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json())
 
+app.get('/', function (req, res) {
+    res.end('hello from nodejs')
+
+}
+
+
 app.post('/', function (req, res) {
     const reqUrl = req.body.url
     const reqQuery = req.body.query
